@@ -17,6 +17,7 @@
   margin-top: 0;
   font-size: 1.5rem;
   text-align: left;
+  border-color: #666;
   border-bottom: 1px solid #666;
   line-height: 2rem;
 }
@@ -33,6 +34,15 @@
 
 .value {
   text-align: right;
+}
+
+.updateinforight {
+  text-align: right;
+  font-size:small;
+}
+.updateinfoleft {
+  text-align: left;
+  font-size:small;
 }
 
 .mattributes {
@@ -60,6 +70,11 @@
 .battery-level-danger {
   color: lightcoral;
 }
+
+.security-warning {
+  color: orange;
+}
+
 
 .mattributes .mattribute .name:after {
   content: ': ';

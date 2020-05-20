@@ -23,15 +23,10 @@ module.exports = NodeHelper.create({
 	getData: function() {
 		var self = this;
 		var myUrl = this.config.apiBase + this.config.apiKey + this.config.apiQuery;
-		request({
-			url: myUrl,
-			method: 'GET',
-			headers: { 'TeslaFi_API_TOKEN': this.config.apiKey }
+		request({ url: myUrl, method: 'GET'
 		}, function (error, response, body) {
 
-			if (!error && response.statusCode == 200) {
-				self.sendSocketNotification("DATA", body);
-			}
+		self.sendSocketNotification("DATA", body);
 		});
 
 		setTimeout(function() { self.getData(); }, this.config.refreshInterval);
